@@ -5,6 +5,7 @@
 2. 支持逐步问诊功能
 3. 整合中西医诊断信息
 4. 记忆对话历史和患者信息
+5. 提供可解释AI功能（Chain-of-Thought推理、反事实解释、追问式解释等）
 """
 import os
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
@@ -17,13 +18,20 @@ def main():
     agent = IntegratedDiagnosticAgent()
     
     print("=" * 60)
-    print("中西医结合诊疗系统 - Final Agent")
+    print("中西医结合诊疗系统 - Final Agent (支持可解释AI)")
     print("=" * 60)
     print("功能说明：")
     print("1. 智能回答中西医相关问题")
     print("2. 支持逐步问诊功能")
     print("3. 整合中西医诊断信息")
     print("4. 记忆对话历史和患者信息")
+    print("5. 提供可解释AI功能：")
+    print("   - Chain-of-Thought推理: /explain cot")
+    print("   - 详细解释: /explain detailed")
+    print("   - 简洁解释: /explain brief")
+    print("   - 结构化输出: /explain structured")
+    print("   - 反事实解释: '如果...会怎样？'")
+    print("   - 追问式解释: '为什么...?' '如何...?'")
     print("输入 'quit' 或 'exit' 退出系统")
     print("输入 'history' 查看对话历史")
     print("输入 'reset' 重置对话")

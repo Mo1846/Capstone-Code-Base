@@ -14,7 +14,7 @@ def write_chunk(name, fp):
 
 
 
-with open("basic app/term.txt","w",encoding="UTF-8") as f:
+with open("basic_app/term.txt","w",encoding="UTF-8") as f:
     write_chunk("方剂",f)
     write_chunk("证型",f)
     write_chunk("症状",f)
